@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interviewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <i class="fas fa-robot"></i>
+            <h1>AI Interviewer</h1>
+            <p>Professional AI-powered interview assessment</p>
+        </header>
+
+        <main class="main">
+            <div class="card" id="personal-card">
+                <div class="card-header">
+                    <i class="fas fa-user"></i>
+                    <h2>Personal Information</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-signature"></i> Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="qualification"><i class="fas fa-graduation-cap"></i> Qualification</label>
+                        <input type="text" id="qualification" placeholder="e.g., Bachelor's in Computer Science" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills"><i class="fas fa-tools"></i> Skills</label>
+                        <input type="text" id="skills" placeholder="e.g., Python, JavaScript, SQL" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobRole"><i class="fas fa-briefcase"></i> Job Role</label>
+                        <select id="jobRole" required>
+                            <option value="">Select Job Role</option>
+                            <option>Python Developer</option>
+                            <option>Web Developer</option>
+                            <option>Data Analyst</option>
+                            <option>Android Developer</option>
+                            <option>Cyber Security</option>
+                            <option>AI/Machine Learning</option>
+                            <option>Full-Stack Developer</option>
+                        </select>
+                    </div>
+                    <button id="startInterview" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Start Interview
+                    </button>
+                </div>
+            </div>
+
+            <div class="card hidden" id="questions-card">
+                <div class="card-header">
+                    <i class="fas fa-question-circle"></i>
+                    <h2>Interview Questions</h2>
+                </div>
+                <div class="card-body">
+                    <div class="question">
+                        <label for="q1"><i class="fas fa-briefcase"></i> Explain your experience related to this job.</label>
+                        <textarea id="q1" placeholder="Describe your relevant work experience..."></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="q2"><i class="fas fa-project-diagram"></i> What is the biggest project you worked on?</label>
+                        <textarea id="q2" placeholder="Detail your most significant project..."></textarea>
+                    </div>
+                    <div class="question">
+                        <label for="q3"><i class="fas fa-exclamation-triangle"></i> How do you handle challenges at work?</label>
+                        <textarea id="q3" placeholder="Explain your approach to problem-solving..."></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button id="finishInterview" class="btn btn-success">
+                            <i class="fas fa-check"></i> Finish Interview
+                        </button>
+                        <button id="backToPersonal" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card hidden" id="feedback-card">
+                <div class="card-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Interview Results</h2>
+                </div>
+                <div class="card-body">
+                    <div id="feedback"></div>
+                    <button id="reset" class="btn btn-primary">
+                        <i class="fas fa-redo"></i> Start New Interview
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 AI Interviewer. Powered by OpenAI.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

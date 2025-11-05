@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Powered Interview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>AI Powered Interview</h2>
+
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="qualification" placeholder="Qualification">
+        <input type="text" id="skills" placeholder="Skills">
+
+        <select id="jobRole">
+            <option value="">Select Job Role</option>
+            <option>Python Developer</option>
+            <option>Web Developer</option>
+            <option>Data Analyst</option>
+            <option>Android Developer</option>
+            <option>Cyber Security</option>
+            <option>AI/Machine Learning</option>
+            <option>Full-Stack Developer</option>
+        </select>
+
+        <button id="startInterview">Start Interview</button>
+
+        <div id="questions" style="display:none;">
+            <h3>Interview Questions</h3>
+
+            <label>Explain your experience related to this job.</label>
+            <textarea id="q1"></textarea>
+
+            <label>What is the biggest project you worked on?</label>
+            <textarea id="q2"></textarea>
+
+            <label>How do you handle challenges at work?</label>
+            <textarea id="q3"></textarea>
+
+            <button id="finishInterview">Finish Interview</button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
